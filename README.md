@@ -13,5 +13,5 @@ or download open data from [here](https://osf.io/mpnrw/?view_only=d4c253756a264f
 ## Run Analyzer
 `$ python lte-analyzer.py ./mi 2> $YOUR_OUTPUT_FILE`
 then run a script on this file. For example,
-`$ python analyzeRANLatency.py $YOUR_OUTPUT_FILE`
-to get the total RAN latency for your application
+`$ python analyzeAggregateRANLatency.py $YOUR_OUTPUT_FILE`
+to get the aggregate RAN latency for your application
