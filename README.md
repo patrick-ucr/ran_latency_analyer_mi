@@ -6,6 +6,7 @@
 Install the following to your machine and MI apk to your rooted android phone
 - Python 2.7.12
 - MobilieInsight 4.0
+Replace PCDP, RLC, MAC, PHY analyzers in folder `/mobile_insight/analyzer` with the downloaded, custom analyzers of the same filenames. 
 ## Data Collection
 Run MI and your desired Android application then
 Collect *.mi2log* from the phone to a folder ./mi and run the scripts
