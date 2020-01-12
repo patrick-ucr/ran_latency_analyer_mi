@@ -88,7 +88,7 @@ class LtePhyAnalyzer(Analyzer):
         source.enable_log("LTE_MAC_UL_Tx_Statistics")
         source.enable_log("LTE_PHY_PUCCH_Tx_Report")
         source.enable_log("LTE_PHY_PUSCH_Tx_Report")
-
+        source.enable_log("LTE_PHY_Serv_Cell_Measurement")
     def callback_pusch_tx(self, msg):
         """
         Dump PUSCH power measurement information
@@ -359,8 +359,14 @@ class LtePhyAnalyzer(Analyzer):
             return cqi_to_bw[self.cur_cqi0]
         else:
             return None
-    #def callback_serv_cell(self,msg):
-        
+    def callback_serv_cell(self,msg):
+        log_item = msg.data.decode()
+        subpkts = log_item['Subpackets']
+        for spkt in subpkts:
+            self.log_info("Physical Cell ID: "+str(spkt['Physical Cell ID'])+" Is Serving Cell: "+str(spkt['Is Serving Cell']))
+            self.log_info("RSRP: " +str(spkt['RSRP'])+" RSRQ: " +str(spkt['RSRQ'])+" RSSI: " +str(spkt['RSSI']))
+            self.log_info("FTL SNR Rx[0]: " +str(spkt['FTL SNR Rx[0]'])+" FTL SNR Rx[1]: " +str(spkt['FTL SNR Rx[1]'])+" FTL SNR Rx[2]: " +str(spkt['FTL SNR Rx[2]'])+" FTL SNR Rx[3]: " +str(spkt['FTL SNR Rx[3]']))
+            self.log_info("Projected SIR: "+str(spkt['Projected SIR']))
     def __msg_callback(self, msg):
 
         if msg.type_id == "LTE_PHY_PDSCH_Packet":
@@ -373,5 +379,5 @@ class LtePhyAnalyzer(Analyzer):
             self.callback_pucch(msg)
         elif msg.type_id == "LTE_PHY_PUSCH_Tx_Report":
             self.callback_pusch_tx(msg)
-        #elif msg.type_id == "LTE_PHY_Serv_Cell_Measurement":
-        #    self.callback_serv_cell(msg)
+        elif msg.type_id == "LTE_PHY_Serv_Cell_Measurement":
+            self.callback_serv_cell(msg)
