@@ -18,3 +18,6 @@ Collect *.mi2log* from the phone to a folder ./mi and run the scripts
 then run a script on this file. For example,
 `$ python analyzeAggregateRANLatency.py $YOUR_OUTPUT_FILE`
 to get the aggregate RAN latency for your application
+
+## Publication
+“Characterization of Multi-User Augmented Reality over Cellular Networks” K. Apicharttrisorn, Bharath Balasubramanian, Jiasi Chen, Rajarajan Sivaraj, Yu Zhou, Rittwik Jana, Srikanth Krishnamurthy, Tuyen Tran, and Yi-Zhen Tsai. IEEE SECON 2020 (to appear)
