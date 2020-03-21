@@ -20,4 +20,4 @@ then run a script on this file. For example,
 to get the aggregate RAN latency for your application
 
 ## Publication
-“Characterization of Multi-User Augmented Reality over Cellular Networks” K. Apicharttrisorn, Bharath Balasubramanian, Jiasi Chen, Rajarajan Sivaraj, Yu Zhou, Rittwik Jana, Srikanth Krishnamurthy, Tuyen Tran, and Yi-Zhen Tsai. IEEE SECON 2020 (to appear)
+This work is part of the paper “Characterization of Multi-User Augmented Reality over Cellular Networks” K. Apicharttrisorn, Bharath Balasubramanian, Jiasi Chen, Rajarajan Sivaraj, Yu Zhou, Rittwik Jana, Srikanth Krishnamurthy, Tuyen Tran, and Yi-Zhen Tsai. IEEE SECON 2020 (to appear). Thank you UC, Riverside and AT&T Labs Research.
