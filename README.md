@@ -1,4 +1,4 @@
-# "Custom MobileInsight Analyzer and Python Scripts for RAN-Level Deep Analysis" Kittipat Apicharttrisorn (UC Riverside), Rajarajan Sivaraj (AT&T Labs Research, San Ramon, CA), and Rittwik Jana (AT&T Labs Research, Bedmister, NJ)
+# "Custom MobileInsight Analyzer and Python Scripts for RAN-Level Deep Analysis" Kittipat Apicharttrisorn (UC Riverside), Rajarajan Sivaraj (AT&T Labs Research, San Ramon, CA), and Rittwik Jana (AT&T Labs Research, Bedminster, NJ)
 - Custom MobileInsight analyzer to collect relevant information at PDCP, RLC, MAC and PHY layers of LTE
 - Python scripts to extract insights into RAN latency, PHY network conditions, and RLC segmentation
 - Open data collected and used to plot results in a paper under a peer review
